@@ -146,7 +146,24 @@
       urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
     };
   };
-
+  # https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.enable
+  programs.zsh = {
+    enable = true;
+    enableAutosuggestions = true;
+    enableCompletion = true;
+    shellAliases = {
+      vi = "hx";
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch";
+    };
+    # histSize = 10000;
+    # histFile = "${config.xdg.dataHome}/zsh/history";
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "sudo" "extract"];
+      theme = "ys";
+    };
+  };
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
