@@ -74,8 +74,13 @@
     pciutils # lspci
     usbutils # lsusb
 
-    helix.packages."${pkgs.system}".helix
+    # editors
+    helix
   ];
+
+  programs.helix = {
+    enable = true;
+  };
 
   programs.zoxide = {
     enable = true;
