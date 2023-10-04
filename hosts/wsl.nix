@@ -1,5 +1,4 @@
 {
-  helix,
   pkgs,
   username,
   ...
