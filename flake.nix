@@ -35,6 +35,10 @@
       # `inputs.nixpkgs` 保持一致，避免依赖的 nixpkgs 版本不一致导致问题
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-wsl = {
+      url = "github:nix-community/NixOS-WSL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   # outputs 即 flake 的所有输出，其中的 nixosConfigurations 即 NixOS 系统配置
@@ -44,7 +48,7 @@
   # 比如这里的输入参数 `nixpkgs`，就是上面 inputs 中的 `nixpkgs`
   # 不过 self 是个例外，这个特殊参数指向 outputs 自身（自引用），以及 flake 根目录
   # 这里的 @ 语法将函数的参数 attribute set 取了个别名，方便在内部使用
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nixos-wsl, ... }@inputs: {
     # 名为 nixosConfigurations 的 outputs 会在执行 `sudo nixos-rebuild switch`
     # 时被使用，默认情况下上述命令会使用与主机 hostname 同名的 nixosConfigurations
     # 但是也可以通过 `--flake /path/to/flake/direcotry#nixos-test` 来指定
@@ -59,6 +63,7 @@
       # 后面的 attributes set 是它的参数，在 nixos 系统上使用如下命令即可部署此配置：
       #     nixos-rebuild switch --flake .#nixos-test
       "nixos-neil" = nixpkgs.lib.nixosSystem {
+        # config.users.defaultUserShell = pkgs.zsh;
         system = "x86_64-linux";
         # 将所有 inputs 参数设为所有子模块的特殊参数，
         # 这样就能在子模块中使用 helix 这个 inputs 了
@@ -91,10 +96,13 @@
         # 如果需要传其他非默认参数，就得使用 specialArgs，你可以取消注释如下这行来启用该参数
         # specialArgs = inputs  # 将 inputs 中的参数传入所有子模块
         modules = [
+          # 导入 nixos-wsl 模块
+          nixos-wsl.nixosModules.wsl
+          .hosts/wsl.nix
           # 这里导入之前我们使用的 configuration.nix，这样旧的配置文件仍然能生效
           # 注: configuration.nix 本身也是一个 Nix Module，因此可以直接在这里导入
-          ./configuration.nix
-                    # 将 home-manager 配置为 nixos 的一个 module
+          # ./configuration.nix
+          # 将 home-manager 配置为 nixos 的一个 module
           # 这样在 nixos-rebuild switch 时，home-manager 配置也会被自动部署
           home-manager.nixosModules.home-manager
           {

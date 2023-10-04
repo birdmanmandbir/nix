@@ -17,6 +17,7 @@
   wsl.defaultUser = "neil";
   nix.settings.trusted-users = [ "neil" ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # users.defaultUserShell = pkgs.zsh;
   environment.systemPackages = with pkgs; [
     git  # Nix Flakes 通过 git 命令从数据源拉取依赖，所以必须先安装好 git
     vim
