@@ -30,6 +30,7 @@
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
     ipcalc  # it is a calculator for the IPv4/v6 addresses
+    pingu
 
     # misc
     cowsay
@@ -88,6 +89,7 @@
     ls = "eza";
     ll = "eza -l";
     vi = "hx";
+    ping = "pingu";
     # ps = "${pkgs.procs}/bin/procs";
   };
 
