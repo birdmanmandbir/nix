@@ -5,23 +5,30 @@
 - proxy.sh: use in root (wsl)
 
 ## TODOS
-- [ ] use zsh as default shell
+
+### important
+- [ ] gh client + ssh
+- [ ] git public key
+- [ ] devbox
+- [ ] charm mods envs (maybe with nix secret?)
+
+### list
 - [ ] config lsp language servers for helix
 - [ ] fonts
 - [ ] theme
 - [ ] fcitx
-- [ ] devbox
-- [ ] git public key
-- [x] alias
 - [ ] use nix to download notes/codes with git (post install hook, run once when finish?)
-- [ ] nix + charm
 - [ ] http env proxy?
-- [ ] how to know which tool is in nixos repository, like gum/glow/cue?
-- [ ] gh client + ssh
+- [ ] how to know which tool is in nixos repository/home.pkgs, like gum/glow/cue?
 - [ ] more git command line tool?
 - [ ] english word card for programer based on cue? but need a new name for nix
-- [ ] charm mods envs (maybe with nix secret?)
 - [ ] ssh remote desktop?
+- [ ] add charm card tool to nixpkgs?
+
+### finish
+- [x] use zsh as default shell
+- [x] alias
+- [x] nix + charm
 
 ## Problems
 
