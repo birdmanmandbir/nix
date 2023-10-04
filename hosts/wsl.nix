@@ -15,7 +15,6 @@
   networking.hostName = "wsl-nix";
 
   environment.systemPackages = with pkgs; [
-    tree
     wsl-open
     # nix-bash-completions
     curl

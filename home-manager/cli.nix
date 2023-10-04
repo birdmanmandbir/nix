@@ -31,13 +31,12 @@
     nmap # A utility for network discovery and security auditing
     ipcalc  # it is a calculator for the IPv4/v6 addresses
     pingu
-    httpie
+    httpie # http test, similar to curl, have a DESKTOP VERSION!
 
     # misc
     cowsay
     file
     which
-    tree
     gnused
     gnutar
     gawk
@@ -113,6 +112,15 @@
     enable = true;
     userName = "birdmanmandbir";
     userEmail = "bn0010100@gmail.com";
+  };
+
+  # GitHub CLI
+  programs.gh = {
+    enable = true;
+    extensions = with pkgs; [gh-markdown-preview]; # オススメ
+    settings = {
+      editor = "hx";
+    };
   };
 
   # Let Home Manager install and manage itself.

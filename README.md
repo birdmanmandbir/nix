@@ -15,7 +15,8 @@
 - [x] alias
 - [ ] use nix to download notes/codes with git (post install hook, run once when finish?)
 - [ ] nix + charm
-- [ ] 
+- [ ] http env proxy?
+- [ ] how to know which tool is in nixos repository, like gum/glow/cue?
 
 ## Problems
 
