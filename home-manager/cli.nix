@@ -1,12 +1,6 @@
 { config, pkgs, ... }: {
-
-  home.stateVersion = "23.05";
-  home.username = "neil";
-  home.homeDirectory = "/home/neil";
-
-  # 之前的 systemPackages 是系统范围包，这里就是用户范围包
+  home.file.".config/helix/config.toml".source = ./config/helix.toml;
   home.packages = with pkgs; [
-    # 如下是我常用的一些命令行工具，你可以根据自己的需要进行增删
     neofetch
     nnn # terminal file manager
 
@@ -111,5 +105,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
 }

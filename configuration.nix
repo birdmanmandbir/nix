@@ -23,11 +23,9 @@
     vim
     wget
     curl
-    # 这里从 helix 这个 inputs 数据源安装了 helix 程序
-    helix.packages."${pkgs.system}".helix
   ];
   # 将默认编辑器设置为 vim
-  environment.variables.EDITOR = "hx";  
+  environment.variables.EDITOR = "vim";  
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
