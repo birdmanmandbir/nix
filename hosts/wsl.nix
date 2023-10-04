@@ -4,8 +4,6 @@
   username,
   ...
 }: {
-  # 主要区别就是这个 wsl 模块
-  # 其实就是抄这里 https://github.com/nix-community/NixOS-WSL/blob/main/configuration.nix
   wsl = {
     enable = true;
     defaultUser = "${username}";
@@ -25,7 +23,6 @@
     wget
     git
     vim
-    helix.packages."${pkgs.system}".helix
   ];
 
   # zsh

@@ -73,6 +73,8 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+
+    helix.packages."${pkgs.system}".helix
   ];
 
   programs.zoxide = {
