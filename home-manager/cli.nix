@@ -51,7 +51,6 @@
 
     # productivity
     hugo # static site generator
-    glow # markdown previewer in terminal
     zellij # window manager
 
     # resource
@@ -74,6 +73,16 @@
 
     # editors
     helix
+
+    # charm
+    mods
+    gum
+    slides
+    nap
+    typer
+    glow # markdown previewer in terminal
+    vhs
+    skate
   ];
 
   programs.helix = {

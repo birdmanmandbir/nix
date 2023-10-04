@@ -17,6 +17,10 @@
 - [ ] nix + charm
 - [ ] http env proxy?
 - [ ] how to know which tool is in nixos repository, like gum/glow/cue?
+- [ ] gh client + ssh
+- [ ] more git command line tool?
+- [ ] english word card for programer based on cue? but need a new name for nix
+- [ ] charm mods proxy
 
 ## Problems
 
