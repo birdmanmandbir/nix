@@ -83,6 +83,9 @@
     glow # markdown previewer in terminal
     vhs
     skate
+
+    # lsp
+    nil
   ];
 
   programs.helix = {

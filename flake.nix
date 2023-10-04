@@ -26,7 +26,6 @@
 
     # NixOS 官方软件源，这里使用 nixos-unstable 分支
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    helix.url = "github:helix-editor/helix/23.05";
     # home-manager，用于管理用户配置
     home-manager = {
       url = "github:nix-community/home-manager";

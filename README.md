@@ -20,7 +20,8 @@
 - [ ] gh client + ssh
 - [ ] more git command line tool?
 - [ ] english word card for programer based on cue? but need a new name for nix
-- [ ] charm mods proxy
+- [ ] charm mods envs (maybe with nix secret?)
+- [ ] ssh remote desktop?
 
 ## Problems
 
