@@ -101,6 +101,7 @@
         # wsl modules
         nixos-wsl.nixosModules.wsl
         ./hosts/wsl.nix
+        ./home-manager
         # home-manager modules
         home-manager.nixosModules.home-manager
         {
