@@ -15,6 +15,7 @@
 - [x] alias
 - [ ] use nix to download notes/codes with git (post install hook, run once when finish?)
 - [ ] nix + charm
+- [ ] 
 
 ## Problems
 

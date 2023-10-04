@@ -14,8 +14,10 @@
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.enable
   programs.zsh = {
     enable = true;
+    autocd = true;
     enableAutosuggestions = true;
     enableCompletion = true;
+    syntaxHighlighting.enable = true;
     shellAliases = {
       # vi = "hx";
       # ll = "ls -l";

@@ -31,6 +31,7 @@
     nmap # A utility for network discovery and security auditing
     ipcalc  # it is a calculator for the IPv4/v6 addresses
     pingu
+    httpie
 
     # misc
     cowsay
@@ -54,6 +55,8 @@
     glow # markdown previewer in terminal
     zellij # window manager
 
+    # resource
+    bottom
     btop  # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
@@ -86,10 +89,13 @@
 
   home.shellAliases = {
     cat = "bat";
-    ls = "eza";
-    ll = "eza -l";
     vi = "hx";
     ping = "pingu";
+    grep = "rg";
+    ls = "exa --icons --classify";
+    la = "exa --all --icons --classify";
+    ll = "exa --long --all --git --icons";
+    tree = "exa --icons --classify --tree";
     # ps = "${pkgs.procs}/bin/procs";
   };
 
