@@ -17,8 +17,8 @@
     enableAutosuggestions = true;
     enableCompletion = true;
     shellAliases = {
-      vi = "hx";
-      ll = "ls -l";
+      # vi = "hx";
+      # ll = "ls -l";
       update = "sudo nixos-rebuild switch --flake $HOME/.config/nix#nixos";
     };
     # histSize = 10000;

@@ -84,6 +84,9 @@
 
   home.shellAliases = {
     cat = "bat";
+    ls = "eza";
+    ll = "eza -l";
+    vi = "hx";
     # ps = "${pkgs.procs}/bin/procs";
   };
 
