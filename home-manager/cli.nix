@@ -1,6 +1,8 @@
 { config, pkgs, ... }: {
 
-  home.stateVersion = 23.05;
+  home.stateVersion = "23.05";
+  home.username = "neil";
+  home.homeDirectory = "/home/neil";
 
   # 之前的 systemPackages 是系统范围包，这里就是用户范围包
   home.packages = with pkgs; [
@@ -13,7 +15,6 @@
     xz
     unzip
     p7zip
-    unrar
 
     # trash-cli
     # proxychains-ng
