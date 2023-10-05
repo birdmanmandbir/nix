@@ -63,6 +63,12 @@
 
     # Zig
     zls
+
+		# Markdown
+		marksman
+
+		# jsonnet
+		jsonnet-language-server
 	];
 }
 
