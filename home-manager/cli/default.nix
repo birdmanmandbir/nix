@@ -3,7 +3,7 @@
     ./zsh
     ./dev.nix
   ];
-  home.file."../config/helix/config.toml".source = ./config/helix.toml;
+  home.file.".config/helix/config.toml".source = ../config/helix.toml;
   home.packages = with pkgs; [
     nnn # terminal file manager
 

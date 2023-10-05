@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   imports = [./starship.nix];
   # https://rycee.gitlab.io/home-manager/options.html#opt-programs.zsh.enable
   programs.zsh = {
