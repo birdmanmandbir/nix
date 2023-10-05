@@ -4,10 +4,9 @@
   ...
 }: {
   imports = [
-    ./cli.nix
+    ./cli
     # ./gui.nix
-    ./zsh.nix
-    ./dev.nix
+    # ./desktop
   ];
 
   home.stateVersion = "23.05";

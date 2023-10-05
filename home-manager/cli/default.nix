@@ -1,4 +1,8 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
+  imports = [
+    ./zsh
+    ./dev.nix
+  ];
   home.file.".config/helix/config.toml".source = ./config/helix.toml;
   home.packages = with pkgs; [
     nnn # terminal file manager
@@ -121,14 +125,6 @@
   };
 
   home.shellAliases = {
-    cat = "bat";
-    vi = "hx";
-    ping = "pingu";
-    grep = "rg";
-    ls = "exa --icons --classify";
-    la = "exa --all --icons --classify";
-    ll = "exa --long --all --git --icons";
-    tree = "exa --icons --classify --tree";
     # ps = "${pkgs.procs}/bin/procs";
   };
 
