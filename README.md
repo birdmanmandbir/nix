@@ -8,6 +8,8 @@
 
 ### important
 - [ ] gh client + ssh
+  - gh-q?
+  - gh-fuzzyclone
 - [ ] git public key
 - [ ] devbox
 - [ ] charm mods envs (maybe with nix secret?)

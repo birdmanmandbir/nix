@@ -1,0 +1,58 @@
+{pkgs, ...}: let
+  stack-wrapped = pkgs.symlinkJoin {
+    name = "stack";
+    paths = [pkgs.stack];
+    buildInputs = [pkgs.makeWrapper];
+    postBuild = ''
+      wrapProgram $out/bin/stack \
+        --add-flags "\
+          --no-nix \
+          --system-ghc \
+          --no-install-ghc \
+        "
+    '';
+  };
+in {
+  home.packages = with pkgs; [
+    # Languages
+    ## C
+    gcc
+
+    ## CUE
+    # cue
+
+    ## Go
+    go
+
+    ## JS/TS
+    nodePackages_latest.nodejs
+    nodePackages_latest.pnpm
+    nodePackages_latest.vercel
+    nodePackages_latest.wrangler
+    deno
+    bun
+
+    ## Protocol Buffers
+    buf
+    protobuf
+
+    ## Python
+    python312
+
+    ## Rust
+    rust-bin.stable.latest.default
+
+    ## Zig
+    zig
+
+    # Nix
+    nil
+
+    # DevOps
+    ## Terraform
+    terraform
+
+    # Dev Tools
+    supabase-cli
+  ];
+}

@@ -1,10 +1,9 @@
 { config, pkgs, ... }: {
   home.file.".config/helix/config.toml".source = ./config/helix.toml;
   home.packages = with pkgs; [
-    neofetch
     nnn # terminal file manager
 
-    # archives
+    # Archives
     zip
     xz
     unzip
@@ -12,14 +11,6 @@
 
     # trash-cli
     # proxychains-ng
-
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq # A lightweight and flexible command-line JSON processor
-    yq-go # yaml processer https://github.com/mikefarah/yq
-    eza # A modern replacement for ‘ls’
-    bat # A modern replacement for ‘cat’
-    fzf # A command-line fuzzy finder
 
     # networking tools
     mtr # A network diagnostic tool
@@ -30,11 +21,8 @@
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
     ipcalc  # it is a calculator for the IPv4/v6 addresses
-    pingu
-    httpie # http test, similar to curl, have a DESKTOP VERSION!
 
     # misc
-    cowsay
     file
     which
     gnused
@@ -52,12 +40,6 @@
     # productivity
     hugo # static site generator
     zellij # window manager
-
-    # resource
-    bottom
-    btop  # replacement of htop/nmon
-    iotop # io monitoring
-    iftop # network monitoring
 
     # system call monitoring
     strace # system call monitoring
@@ -84,8 +66,48 @@
     vhs
     skate
 
-    # lsp
-    nil
+    # Utilities
+    bat # cat alternative
+
+    bottom # top alternative
+    btop  # replacement of htop/nmon
+    iotop # io monitoring
+    iftop # network monitoring
+
+    du-dust # du alternative
+    duf # df alternative
+    eza # ls alternative
+    fd # find alternative
+    fx # json viewer
+    fzf # fazzy finder
+    ghq # git repository manager
+    httpie # http client
+    imagemagick # image manipulation
+    jq # json parser
+    yq-go # yaml processer https://github.com/mikefarah/yq
+    killall # process killer
+    lazydocker # docker tui
+    lazygit # git tui
+    nurl # generate nix fetcher
+    procs # ps alternative
+    ripgrep # grep alternative
+    silicon # code to image
+    speedtest-cli # speedtest
+    tokei # analyze code statistics
+    yazi # file manager
+
+    # Rice
+    cava
+    neofetch
+    nitch
+    pfetch
+    tty-clock
+
+    # Joke
+    cowsay
+    figlet
+    lolcat
+    pingu
   ];
 
   programs.helix = {
@@ -124,14 +146,18 @@
     enable = true;
     userName = "birdmanmandbir";
     userEmail = "bn0010100@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
   # GitHub CLI
   programs.gh = {
     enable = true;
-    extensions = with pkgs; [gh-markdown-preview]; # オススメ
+    extensions = with pkgs; [gh-markdown-preview];
     settings = {
       editor = "hx";
+      git_protocol = "https";
     };
   };
 
