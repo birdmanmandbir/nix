@@ -19,7 +19,7 @@ in {
     gcc
 
     ## CUE
-    # cue
+    cue
 
     ## Go
     go
@@ -44,9 +44,6 @@ in {
 
     ## Zig
     zig
-
-    # Nix
-    nil
 
     # DevOps
     ## Terraform

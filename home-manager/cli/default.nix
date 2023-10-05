@@ -2,6 +2,7 @@
   imports = [
     ./zsh
     ./dev.nix
+    ./lsp.nix
   ];
   home.file.".config/helix/config.toml".source = ../config/helix.toml;
   home.packages = with pkgs; [

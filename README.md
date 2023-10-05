@@ -13,6 +13,7 @@
 - [ ] git public key
 - [ ] devbox
 - [ ] charm mods envs (maybe with nix secret?)
+- [ ] decouple hosts (wsl/pc)
 
 ### list
 - [ ] config lsp language servers for helix
