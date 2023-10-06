@@ -32,6 +32,7 @@
 - [x] use zsh as default shell
 - [x] alias
 - [x] nix + charm
+- [x] lsp
 
 ## Problems
 
